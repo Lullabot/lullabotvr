@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>LullabotVR</title>
+    <meta name="description" content="LullabotVR">
+    <script src="https://aframe.io/releases/latest/aframe.min.js"></script>
+  </head>
+  <body>
+    // Need to figure out how to swap video on screen for one of available assets listed here.
+    <!--<a-assets>
+      <video id="lullbot-video" src="./videos/lullabot.mp4" loop="false"></video>
+      <video id="msnbc-video" src="./videos/msnbc.mp4" loop="false"></video>
+      <video id="syfy-video" src="./videos/syfy.mp4" loop="false"></video>
+    </a-assets>-->
+
+    <a-scene>
+        // Panoramic Scene
+        <a-sky src="./images/background.jpg"></a-sky>
+
+        // Light
+        <!--<a-light color="white" position="-50 30 0" distance="50" decay="5"></a-light>-->
+
+        // Ground
+        <a-plane src="" position="0 -20 0" rotation="-90 0 0" width="2000" height="2000" color="grey"></a-plane>
+
+        // Video screen
+        <a-video src="./videos/lullabot.mp4" width="800" height="450" position="0 225 -500" autoplay></a-video>
+
+        // Platform
+        <a-cylinder radius="1.5" position="0 -.5 4" rotation="0 0 0" height="3" open-ended="false" color="white"></a-cylinder>
+
+        // Dashboard
+        <a-image src="./images/lullabot.png" position="0 1.65 2.9" rotation="-35 0 0" height=".25" width=".5" color="white"></a-image>
+        <a-cylinder radius=".02" position="0 0.09 2.92" rotation="0 0 0" height="3" open-ended="false" color="gray"></a-cylinder>
+
+        <a-image src="./images/msnbc.png" position="-.65 1.65 3.08" rotation="-35 35 0" height=".25" width=".5" color="white"></a-image>
+        <a-cylinder radius=".02" position="-.65 0.09 3.1" rotation="0 0 0" height="3" open-ended="false" color="grey"></a-cylinder>
+
+        <a-image src="./images/syfy.png" position=".65 1.65 3.08" rotation="-35 -35 0" height=".25" width=".5" color="white"></a-image>
+        <a-cylinder radius=".02" position=".65 0.09 3.1" rotation="0 0 0" height="3" open-ended="false" color="grey"></a-cylinder>
+
+        // Sponsor Wall
+        <a-plane position="0 10 17.01" rotation="0 0 0" height="21" width="21" color="white"></a-plane>
+        <a-plane src="./svgs/client-logos.svg" position="0 10.25 17" rotation="180 0 180" height="20" width="20" color="white"></a-plane>
+    </a-scene>
+  </body>
+</html>
